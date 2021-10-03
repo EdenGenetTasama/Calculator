@@ -83,10 +83,10 @@ function firstNumberValue(Num) {
     } else {
       if (point == false) {
         firstNumber = firstNumber * 10 + parseInt(Num);
-      } else {
-        firstNumber += 
-      }
-    }
+      // } else {
+      //   firstNumber += 
+      // }
+    }}
   } else {
     if (secondNumber == null) {
       secondNumber = parseInt(Num);
