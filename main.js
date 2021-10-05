@@ -1,42 +1,35 @@
-const inputOne = document.getElementById("inpurOne"); //
-const inputTwo = document.getElementById("inpurTwo");
-
-const plusInput = document.getElementById("plus");
-const minusInput = document.getElementById("minus");
-const dubeleInput = document.getElementById("dubele");
-const hilokInput = document.getElementById("hilok");
-
-const Numbers = document.getElementsByClassName("numbers"); //
-
-const inputButton = document.getElementById("button");
-
-// הדפסה של הפעולות
-const answerOfMachvon = document.getElementById("answerOfMachvon");
-
 // Fix                          */
 
-//*define empty variable* */
+// *define empty variable* */
 
 let firstNumber = null;
 let operator = null;
 let secondNumber = null;
-let point = false;
+let point = 0;
+let counter = 1;
+
+// console.log(firstNumber);
+//     console.log(secondNumber);
+//     console.log(operator);
 
 function addOperator(currentOperator) {
+  point = 0;
+  counter = 1;
   if (secondNumber != null) {
     firstNumber = calculate();
     secondNumber = null;
   } else {
     if (operator != null) {
-      console.log("ERROR");
     }
   }
   operator = currentOperator;
-  // console.log(operator);
 }
 
 function calculatePrint() {
   if (firstNumber == null || secondNumber == null || operator == null) {
+    console.log(firstNumber);
+    console.log(secondNumber);
+    console.log(operator);
     console.log("ERROR");
     return;
   }
@@ -50,18 +43,12 @@ function calculate() {
   switch (operator) {
     case "+":
       return firstNumber + secondNumber;
-      break;
     case "-":
       return firstNumber - secondNumber;
-      break;
     case "*":
       return firstNumber * secondNumber;
-      break;
-
     case "/":
       return firstNumber / secondNumber;
-      break;
-
     default:
       break;
   }
@@ -76,27 +63,37 @@ function deleteNum() {
 
 /*חישוב* */
 
-function firstNumberValue(Num) {
+function NumberValue(Num) {
   if (operator == null) {
     if (firstNumber == null) {
       firstNumber = parseInt(Num);
     } else {
-      if (point == false) {
+      if (point === 0) {
         firstNumber = firstNumber * 10 + parseInt(Num);
-      // } else {
-      //   firstNumber += 
-      // }
-    }}
+      } else {
+        firstNumber = firstNumber + (parseInt(Num) / (10 ** counter));
+        counter++;
+      }
+    }
   } else {
-    if (secondNumber == null) {
+    if (secondNumber === null) {
       secondNumber = parseInt(Num);
     } else {
-      secondNumber = secondNumber * 10 + parseInt(Num);
+      if (point === 0) {
+        secondNumber = secondNumber * 10 + parseInt(Num);
+      } else {
+        secondNumber += parseInt(Num) / (10 ** counter);
+
+        counter++;
+      }
     }
   }
 }
-let counter = 1;
 
 function dotCalculate() {
-  point = true;
+  point = 1;
 }
+
+// function showNumberOnInput(value) {
+//   input.value = firstNumber
+// }

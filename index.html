@@ -18,42 +18,44 @@
             <br>
             <label>Enter second number : </label>
             <input type="number" id="inpurTwo">
-            <br> --> 
-
-             <!-- <button id="button" type="button">Send Form</button> -->
-            <br> 
-
-            <section id="desingOfButton">
-            <button id="dubele" type="button" class="mathSing" value= "*" onclick="addOperator(this.value)">*</button>
-            <button id="hilok" type="button" class="mathSing"  value= "/"  onclick="addOperator(this.value)">/</button>
-            <button id="plus" type="button" class="mathSing"  value= "+"  onclick="addOperator(this.value)">+</button>
-            <button id="minus" type="button" class="mathSing"  value= "-"  onclick="addOperator(this.value)">-</button>
-            <button id="equel" type="button" class="mathSing"  value="="  onclick="calculatePrint()" >=</button>
-            <button id="delete" type="button" class="mathSing"  value= "AC" onclick="deleteNum()">AC</button>
-
-
-            <!-- <br>
             <br> -->
 
+            <!-- <button id="button" type="button">Send Form</button> -->
+            <br>
+            <!-- <input> -->
+            <section id="desingOfButton">
+                
+                
+                <!-- <br>
+                    <br> -->
+                    
+                </section>
+                
+                <section>
+                    <input type="text" name="input" size="16" id="answer" value="" oninput="showNumberOnInput(this.value); ">
+                    <button type="button" class="numbers" id="numOne" value="1" onclick="NumberValue(this.value)">1</button>
+                    <button type="button" class="numbers" id="numTwo" value="2" onclick="NumberValue(this.value); ">2</button>
+                    <button type="button" class="numbers" id="numThree" value="3" onclick="NumberValue(this.value)">3</button>
+                    <button type="button" id="plus" type="button" class="mathSing" value="+" onclick="addOperator(this.value)">+</button>
+                    
+                    <button type="button" class="numbers" id="numFour" value="4" onclick="NumberValue(this.value)">4</button>
+                    <button type="button" class="numbers" id="numFive" value="5" onclick="NumberValue(this.value)">5</button>
+                    <button type="button" class="numbers" id="numSix" value="6" onclick="NumberValue(this.value)">6</button>
+                    <button type="button" id="minus" type="button" class="mathSing" value="-" onclick="addOperator(this.value)">-</button>
+                    
+                    <button type="button" class="numbers" id="numSeven" value="7" onclick="NumberValue(this.value)">7</button>
+                    <button type="button" class="numbers" id="numEight" value="8" onclick="NumberValue(this.value)">8</button>
+                    <button type="button" class="numbers" id="numNine" value="9" onclick="NumberValue(this.value)">9</button>
+                    <button type="button" id="dubele" type="button" class="mathSing" value="*" onclick="addOperator(this.value)">*</button>
+                    
+                    <button type="button" id="delete" type="button" class="mathSing" value="AC" onclick="deleteNum()">AC</button>
+                    <button type="button" class="numbers" id="numZero" value="0" onclick="NumberValue(this.value)">0</button>
+                    <button type="button" id="equel" type="button" class="mathSing" value="=" onclick="calculatePrint()">=</button>
+                    <button type="button" id="hilok" type="button" class="mathSing" value="/" onclick="addOperator(this.value)">/</button>
+                    <button type="button" class="numbers" id="dot" value="." onclick="dotCalculate()">.</button>
             </section>
         </form>
-        <section>
-            <button type="button" class="numbers" id="numOne" value="1" onclick="firstNumberValue(this.value)">1</button>
-            <button class="numbers" id="numTwo"  value="2" onclick="firstNumberValue(this.value); ">2</button>
-            <button class="numbers" id="numThree"  value="3" onclick="firstNumberValue(this.value)">3</button>
-            <button class="numbers" id="numFour"  value="4" onclick="firstNumberValue(this.value)">4</button>
-            <button class="numbers" id="numFive"  value="5" onclick="firstNumberValue(this.value)">5</button>
-            <button class="numbers" id="numSix"  value="6" onclick="firstNumberValue(this.value)">6</button>
-            <button class="numbers" id="numSeven" value="7" onclick="firstNumberValue(this.value)">7</button>
-            <button class="numbers" id="numEight" value="8" onclick="firstNumberValue(this.value)">8</button>
-            <button class="numbers" id="numNine" value="9" onclick="firstNumberValue(this.value)">9</button>
-            <button  class="numbers" id="dot" value="." onclick="firstNumberValue(this.value)">.</button>
-            <button class="numbers" id="numZero" value="0" onclick="firstNumberValue(this.value)">0</button>
-        </section>
-
-        <div>
-            <p id="answerOfMachvon"></p>
-        </div>
+       
 
     </main>
 
